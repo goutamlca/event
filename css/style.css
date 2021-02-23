@@ -1,0 +1,1534 @@
+/*
+Website Name:  TheEvent
+Author Name: Goutam Gain
+Version: 1.0
+Author URL: 
+Dated: 02-02-2021
+*/
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Reset CSS*/
+:root {
+    --mont-font: 'Montserrat', sans-serif;
+    --ral-font: 'Raleway', sans-serif;
+
+    --accent-color: #F82249;
+    /*rgb(248,34,73)  Red*/
+    --blue-color: #0E1B4D;
+    /*rgb(14,27,77) Blue*/
+
+    --trans: all .3s ease-in-out;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: var(--mont-font);
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.75;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 3rem 0 1.38rem;
+    font-family: var(--mont-font);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3.052rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.441rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.953rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1.563rem;
+}
+
+h5 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+small,
+.text_small {
+    font-size: 0.8rem;
+}
+
+a,
+a:active,
+a:visited,
+a:hover {
+    text-decoration: none;
+    display: inline-block;
+}
+ ul, li{
+ 	list-style: none;
+ 	padding: 0;
+ 	margin: 0;
+ }
+
+.p50{ padding: 50px 0;}
+
+.btn{
+    font-family: var(--mont-font);
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.3;
+    background-color: var(--accent-color);
+    border-radius: 30px;
+    padding: 6px 20px!important;
+    border: 2px solid transparent;
+    transition: var(-trans);
+}
+
+.btn:hover{
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+}
+
+.title-block h2{
+    font-family: var(--ral-font);
+    font-size: 38px;
+    color: #0E1B4D;
+    font-weight: 700;
+    line-height: 1.9;
+    margin: 0;
+    padding: 0;
+}
+
+.title-block p{
+    font-family: var(--mont-font);
+    font-size: 18px;
+    color: #9397A4;
+    font-weight: 500;
+    line-height: 1.3;
+    position: relative;
+    margin: 0 0 40px 0;
+    padding: 0 0 30px 0;
+}
+
+.title-block p::after{
+	position: absolute;
+	content: '';
+	background-color: var(--accent-color);
+	width: 65px;
+	height: 5px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%); 
+}
+
+/*************BANNER START************/
+.banner-section{
+	background-image: linear-gradient(0deg, rgba(6, 12, 34, 0.8) 0%, rgba(6, 12, 34, 0.8) 100%), url(../images/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 0;
+	margin: 0;
+	min-height: 100vh;
+    position: relative;
+}
+
+.banner-section header{
+	padding: 20px 0;
+	margin: 0;
+}
+
+.banner-section header .logo-block{
+	width: 200px;
+}
+
+.banner-section .nav-bar ul li a{
+    font-family: var(--mont-font);
+    font-size: 14px;
+	color: #bfbfbf;
+	border-bottom: 2px solid transparent;
+	padding: 0;
+	margin: 0;
+	transition: var(--trans);
+}
+
+.banner-section .nav-bar ul li a.active,
+.banner-section .nav-bar ul li a:hover{
+	color:  #fff;
+	border-bottom: 2px solid var(--accent-color);
+}
+
+.banner-section .nav-bar ul li:last-child a{
+	color: #fff;
+}
+
+#hamberger{
+    display: none;
+}
+.mobile-menu .menu-bar{
+    display: none;
+}
+
+.banner-section .desc {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.banner-section .desc h1{
+    font-family: var(--ral-font);
+    font-size: 48px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    padding: 0;
+    margin: 0;
+}
+.banner-section .desc h1 span{
+    color: var(--accent-color);
+}
+
+.banner-section .desc p{
+    font-family: var(--mont-font);
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.3;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.play-btn{
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: var(--accent-color)!important;
+    text-align: center;
+    line-height: 24px;
+    box-shadow: 0 0 0 10px rgb(255 255 255 / 15%);
+    overflow: hidden;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0 55px 0;
+    transition: .3s;
+}
+
+.play-btn .fa-play{
+    font-size: 20px;
+    color: #fff;
+    opacity: 1;
+    transition: var(--effect);
+    margin-left: 7px;   
+}
+.play-btn:hover{
+    box-shadow: 0 0 0 10px rgb(255 255 255 / 30%);
+}
+
+.play-btn:focus{
+    outline: none;
+/*    box-shadow: none;*/
+border: none;
+}
+
+.banner-section .desc .btn-2{
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.3;
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    border-radius: 30px;
+    padding: 8px 30px;
+    transition: var(--trans);
+}
+.banner-section .desc .btn-2:hover{
+    background-color: var(--accent-color);
+    border: 2px solid transparent;
+}
+
+/*************ABOUT START************/
+
+.about-section{
+/*    filter: blur(5px);*/
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%), url(../images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+.about-section h2{
+    font-family: var(--ral-font);
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+}
+
+.about-section p{
+    font-family: var(--ral-font);
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.3;
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.about-section h3{
+    font-family: var(--ral-font);
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+}
+
+/*************SPEAKERS START************/
+
+.speakers-section{
+    padding: 50px 0 20px 0;
+}
+
+.speakers-section .col-md-4{
+    margin-bottom: 30px;
+}
+
+.speakers-section .img{
+    position: relative;
+    overflow: hidden;
+}
+
+.speakers-section .text{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(14,27,77,.6);
+    padding: 13px 0;
+    transform-origin: bottom center; 
+    transform: translateY(38%);
+    transition: .3s;
+}
+
+.speakers-section .img:hover .text{
+    transform: translateY(0);
+}
+
+.speakers-section .text h3{
+    font-family: var(--ral-font);
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.speakers-section .text h6{
+    font-family: var(--mont-font);
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.3;
+    font-style: italic; 
+    margin: 0;
+    padding: 0;
+}
+
+.speakers-section .text .icons-block .fab{
+    color: #fff;
+    margin: 10px 5px 0 5px;
+    transition: var(--trans);
+}
+
+.speakers-section .text .icons-block .fab:hover{
+    color: var(--accent-color);
+}
+
+/*************SCHEDULE START************/
+
+
+.schedule-section {
+    background-color: #F6F7FD;
+}
+
+.schedule-section .nav-pills {
+    justify-content: center;
+}
+
+.schedule-section .nav-pills .nav-item{
+    margin: 0 5px 0 5px;
+}
+
+.schedule-section #pills-tab .nav-item .nav-link{
+    background-color: var(--blue-color);
+    border-radius: 50px;
+    width: 200px;
+    height: 45px;
+    text-align: center;
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+.schedule-section #pills-tab .nav-item .nav-link.active{
+    background-color: var(--accent-color);
+}
+
+.schedule-section #pills-tab .nav-item .nav-link:active{
+    transform: scale(0.9);
+}
+
+.schedule-section .tab-links p{
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.4;
+    font-style: italic;
+    margin: 30px 0;
+    padding: 0;
+}
+
+.schedule-section .all{
+    padding: 0 140px;
+}
+
+.schedule-section .borders{
+    border-bottom: 1px solid #cad4f6;
+    padding: 15px 0;
+}
+
+.schedule-section .borders h5{
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.3;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.schedule-section .borders h4 {
+    font-family: var(--mont-font);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--blue-color);
+}
+
+.schedule-section .borders p {
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--blue-color);
+}
+
+.schedule-section .borders .image{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.schedule-section .borders .image img{
+    height: 100%;
+    transform: translateX(-50%);
+    margin-left: 50%;
+}
+
+.schedule-section .borders h4 span {
+    font-style: italic;
+    color: #19328e;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+/************* VENUE START************/
+
+.venue-section .row{
+    margin: 0 0 1px 0!important;
+
+}
+
+.venue-section .row .col-md-6{
+    height: 370px;
+    margin: 0!important;
+}
+
+.venue-section iframe{
+    height: 369px;
+    width: 100%;
+}
+
+.venue-section .banner-2{
+    background: linear-gradient(0deg, rgba(14,27,77,0.7) 0%, rgba(14,27,77,0.7) 100%), url(../images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 80px 5%;
+}
+
+.venue-section .banner-2 h3{
+    font-family: var(--rail-font);
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.venue-section .banner-2 p{
+    font-family: var(--rail-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+.venue-section .photos{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    background-color: #fff;
+}
+
+.venue-section .photos .img{
+    overflow: hidden;
+}
+
+.venue-section .photos .img img{
+    transition: .3s;
+}
+
+.venue-section .photos .img:hover img{
+    transform: scale(1.1);
+}
+
+/************* HOTELS START************/
+
+.hotels-section {
+    background-color: #F6F7FD;
+}
+
+.hotels-section .card h3 a{
+    font-family: var(--rail-font);
+    font-size: 20px;
+    font-weight: 600;
+    color: #152b79;
+    line-height: 1.5;
+    transition: var(--trans);
+    margin: 20px 0 0 18px;
+}
+
+.hotels-section .card h3 a:hover{
+    color: var(--accent-color);
+}
+
+.hotels-section .card .icons{
+    margin-left: 18px;
+}
+
+.hotels-section .card .icons .fa{
+    font-size: 14px;
+    color: #ffc31d;
+    margin: 10px 2px;
+}
+
+.hotels-section .card p{
+    font-family: var(--mont-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.3;
+    font-style: italic;
+    margin-left: 18px;
+}
+
+.hotels-section .images-block {
+    overflow: hidden;
+}
+
+.hotels-section .images-block img{
+    transition: var(--trans);
+}
+
+.hotels-section .card .images-block:hover img{
+    transform: scale(1.1);
+}
+
+/************* GALLERY START************/
+
+.gallery-section .center .slick-track{
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-section .center .slick-slide .images-block{
+    transform-origin: center; 
+    transform: scale(.9);
+    transition: transform .3s ease-in-out;
+
+}
+
+.gallery-section .center .slick-slide.slick-center .images-block{
+    border:3px solid red;
+    transform: scale(1.2);
+    z-index: 999;
+    margin: 0 30px;
+} 
+
+/************* SPONSORS START************/
+
+.sponsor-section{
+	background-color: #f6f7fd;
+	padding: 50px 0;
+}
+
+.sponsor-section .title-block h2{
+    position: relative;
+}
+
+.sponsor-section .title-block h2::after{
+	position: absolute;
+	content: '';
+	background-color: var(--accent-color);
+	width: 65px;
+	height: 5px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%); 
+}
+
+.sponsor-section .icon-group{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 1px;
+	border: 1px solid #dcdcdc;
+	background-color: #dcdcdc;
+	margin-top: 50px;
+}
+
+.sponsor-section .icon-group .image{
+	background-color: #fff;
+	padding: 50px;
+}
+
+.sponsor-section .icon-group .image img{
+    transition: .3s;
+}
+
+.sponsor-section .icon-group .image img:hover{
+    transform: scale(1.1);
+}
+
+/************* F.A.Q START************/
+
+.faq-section{
+	padding: 50px;
+	background-color: #fff;
+}
+
+.faq-section .title-block h2{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.faq-section .title-block h2::after{
+	position: absolute;
+	content: '';
+	background-color: var(--accent-color);
+	width: 65px;
+	height: 5px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%); 
+}
+
+.accordion{
+	padding: 0 10%;
+}
+
+.faq-section .accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+    background-image: url(../images/plus.svg);
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+
+    background-color: #000;
+    border-radius: 30px;
+}
+
+.faq-section .accordion-button:not(.collapsed)::after {
+    background-image: url(../images/minus.svg);
+    /* transform: rotate(180deg); */
+    background-color: red;
+    border-radius: 30px;
+}
+
+.faq-section .accordion-header .accordion-button {
+	font-family: 'Montserrat', sans-serif;
+	color: #000;
+	font-size: 18px ;
+	font-weight: 600;
+	line-height: 1.3;
+	border-bottom: 1px solid #dcdcdc!important;
+    box-shadow: none;
+}
+
+button.accordion-button.collapsed {
+    text-align: left;
+}
+
+ .accordion-button:not(.collapsed){
+    color: red!important;
+}
+
+/************* NEWSLETTER START************/
+
+.newsletter-section{
+    background-image: linear-gradient(0deg, rgba(14,27,77,0.8) 0%, rgba(14,27,77,0.8) 100%), url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.newsletter-section .title-block h2{
+    color: #fff;
+}
+
+.newsletter-section .title-block p{
+    color: #fff;
+}
+
+.newsletter-section .forms{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-section form .input-groups .form-control{
+    height: 45px;
+    width: 480px;
+    border-radius: 50px;
+    outline: none;
+    box-shadow: none;
+    padding: 0 0 0 30px;
+    border: none;
+}
+
+.newsletter-section form .input-groups .btn-4{
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    border: none;
+    padding: 9px 35px;
+    font-family: var(--mont-font);
+    font-family: 16px;
+    color: #fff;
+    transition: var(--trans);
+    margin-left: 15px;
+    outline: none;  
+}
+
+.newsletter-section form .input-groups .btn-4:hover{
+   background-color: #9c001c; 
+}
+
+/************* TICKETS START************/
+
+.tickets-section{
+    background-color: #F6F7FD;
+}
+
+.tickets-section .card{
+    background-color: #fff;
+    box-shadow: 0 10px 25px 0 rgb(6 12 34 / 10%);
+    padding: 20px;
+    border-radius: 7px;
+    border: none;
+}
+
+.tickets-section .card h6{
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 600;
+    color: #6c757d;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.tickets-section .card h3{
+    font-family: var(--mont-font);
+    font-size: 48px;
+    font-weight: 400;
+    color: var(--blue-color);
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dcdc;
+    padding-bottom: 30px;  
+}
+
+.tickets-section .card p{
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    line-height: 1.5;
+}
+
+.tickets-section .card p .fas{
+    margin-right: 5px;
+}
+
+.tickets-section .card p span{
+    color: #cecece;
+}
+
+.tickets-section .card p span .fas{
+    margin-right: 5px;
+}
+
+.tickets-section .card p:nth-child(8){
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 30px;
+}
+
+.tickets-section .card .btn-4{
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    border: none;
+    padding: 9px 35px;
+    font-family: var(--mont-font);
+    font-family: 16px;
+    color: #fff;
+    width: 175px;
+    margin: 15px auto 0 auto;
+    transition: var(--trans);
+    outline: none;
+}
+
+.tickets-section .card .btn-4:hover{
+   background-color: #9c001c; 
+}
+
+/************* CONTACT START************/
+
+.contact-section .service{
+    padding: 30px;
+}
+
+.contact-section .line{
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+
+.contact-section .service .far,
+.contact-section .service .fas{
+    color: var(--accent-color);
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+.contact-section .service h3{
+    font-family: var(--ral-font);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--blue-color);
+    line-height: 1.3;
+}
+
+.contact-section .service a{
+    font-family: var(--mont-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #112363;
+    line-height: 1.3;
+    margin: 15px 0;
+    transition: var(--trans);
+}
+
+.contact-section .service a:hover{
+    color: var(--accent-color);
+}
+
+.contact-section form{
+    margin-top: 30px;
+}
+
+.contact-section form .input-group{
+    margin: 0 0 15px 0;
+}
+
+.contact-section form .input-group .form-control{
+    border-radius: 0;
+    padding: 10px 15px;
+    box-shadow: none;
+}
+
+.contact-section form .input-group .form-control:focus{
+    border-color: var(--accent-color);
+}
+
+.contact-section form .input-group .btn-4{
+    background-color: var(--accent-color);
+    border-radius: 50px;
+    border: none;
+    padding: 9px 35px;
+    font-family: var(--mont-font);
+    font-family: 16px;
+    color: #fff;
+    width: 175px;
+    margin: 15px auto 0 auto;
+    transition: var(--trans);
+}
+
+.contact-section form .input-group .btn-4:hover{
+   background-color: #9c001c; 
+}
+
+/************* FOOTER START************/
+
+.footer-section{
+    background-color: #040919;
+}
+
+.footer-section .event-block{
+    margin: 0;
+    padding: 0 2px;
+}
+
+.footer-section .event-block .logo{
+    width: 80%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-section .event-block p{
+    font-family: var(--mont-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.footer-section .useful-block h3{
+    font-family: var(--ral-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f82249;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-section .useful-block ul li{
+    border-bottom: 1px solid #262c44;
+    padding: 10px 0;
+}
+
+.footer-section .useful-block ul li:nth-child(1){
+    padding-top: 0;
+}
+
+.footer-section .useful-block ul li .fas{
+    color: var(--accent-color);
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.footer-section .useful-block ul li a{
+    font-family: var(--mont-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    transition: var(--trans);
+}
+
+.footer-section .useful-block ul li a:hover{
+    color: var(--accent-color);
+}
+
+.footer-section .contact-block li{
+    font-family: var(--mont-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 5px 0;
+}
+
+.footer-section .contact-block li a{
+    font-family: var(--mont-font);
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 400;
+    transition: .3s;
+}
+
+.footer-section .contact-block li a:hover{
+    color: var(--accent-color);
+}
+
+.footer-section .contact-block .icon {
+    margin-top: 30px;
+}
+
+.footer-section .contact-block .icon .fab{
+    font-size: 14px;
+    color: #fff;
+    background-color: #222636;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    line-height: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: var(--trans);
+}
+
+.footer-section .contact-block .icon .fab:hover{
+    background-color: var(--accent-color);
+}
+
+.footer-section .contact-block h3{
+    font-family: var(--ral-font);
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f82249;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+/************* COPYRIGHT START************/
+
+.copyright-section{
+    background-color: #101522;
+    padding: 25px 0;
+}
+
+.copyright-section p{
+    font-family: var(--mont-font);
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.copyright-section p span a{
+    color: var(--accent-color);
+}
+
+/************* COPYRIGHT START************/
+
+/************* TOP START************/
+
+#btn{
+    background-color: var(--accent-color);
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 2%;
+    right: 1%;    
+    transition: var(--trans);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#btn:active{
+    transform: scale(0.1);
+}
+
+/************* TOP END************/
+
+
+
+/*MEDIA QUERY START*/
+
+@media only screen and (max-width: 1366px) {
+
+    body {
+        background-color: #fff;
+        margin: 0;
+    }
+    .banner-section header .logo-block {
+    width: 150px;
+    }    
+    .faq-section .accordion-header .accordion-button {
+        font-size: 14px;
+    }
+    .accordion-body {
+    font-size: 14px;
+    }
+    .footer-section .contact-block .icon .fab {
+        font-size: 12px;
+        width: 30px;
+        height: 30px;
+        line-height: 12px;
+        margin-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1166px) {
+
+    .venue-section .banner-2 h3 {
+        font-size: 31px;
+    }
+    .venue-section .banner-2 p {
+        font-size: 14px;
+    }
+    .footer-section .event-block p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+
+    .banner-section .desc h1{
+    font-size: 40px;
+    }
+    .banner-section .desc h3{
+    font-size: 14px;
+    }
+    .about-section h2 {
+    font-size: 30px;
+    }
+    .about-section p {
+    font-size: 13px;
+    }
+    .about-section h3 {
+    font-size: 16px;
+    }
+    .about-section p {
+    font-size: 11px;
+    }
+    .title-block h2 {
+    font-size: 30px;
+    }
+    .title-block p {
+    font-size: 14px;
+    }
+    .speakers-section .text h3 {
+    font-size: 20px;
+    }
+    .speakers-section .text h6 {
+    font-size: 12px;
+    }
+    .speakers-section .text .icons-block .fab {
+    font-size: 12px;
+    }
+    .schedule-section #pills-tab .nav-item .nav-link {
+    width: 170px;
+    height: 40px;
+    }
+    .schedule-section .all {
+    padding: 0 93px;
+    }
+    .schedule-section .borders h5 {
+    font-size: 14px;
+    }
+    .schedule-section .borders h4 {
+    font-size: 16px;
+    }
+    .schedule-section .borders p {
+    font-size: 14px;
+    }
+    .venue-section .banner-2 h3 {
+    font-size: 25px;
+    }
+    .venue-section .banner-2 p {
+    font-size: 12px;
+    }
+    .venue-section .row .col-md-6 {
+    height: 300px;
+    }
+    .venue-section iframe {
+    height: 300px;
+    }
+    .newsletter-section form .input-groups .form-control {
+    height: 36px;
+    width: 300px;
+    }
+    .form-control {
+    font-size: 12px;
+    }
+    .newsletter-section form .input-groups .btn-4 {
+    padding: 5px 25px;
+    font-size: 14px;
+    }
+    .tickets-section .card h6 {
+    font-size: 15px;
+    }
+    .tickets-section .card .btn-4 {
+    padding: 6px 0;
+    font-size: 14px;
+    width: 150px;
+    }
+    .tickets-section .card p {
+    font-size: 14px;
+    }
+    .service .fas {
+    font-size: 30px;
+    }
+    .contact-section .service h3 { 
+    font-size: 17px;
+    }
+    .contact-section .service p { 
+    font-size: 14px;
+    margin-top: 15px;
+    }
+    .contact-section .service a { 
+    font-size: 14px;
+    }  
+}
+
+@media only screen and (max-width: 992px) {
+
+    .nav-bar{
+        display: none;
+    }
+    #hamberger{
+        display: block;
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        right: auto;
+        margin-left: auto;
+        outline: none;
+    }
+
+    .mobile-menu .menu-bar {
+        background-color: var(--blue-color);
+        width: 100%;
+        text-align: center;
+        top: 0;
+        right: 0;
+        left: 0;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+        z-index: 9999;
+        transition: var(--trans);
+        transform: translateY(-200%);
+        box-shadow: 0 10px 15px 0 rgba(0,0,0,.4);
+    }
+    .mobile-menu .menu-bar ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        position: relative;
+    }
+      .mobile-menu .menu-bar ul li{
+        margin: 10px;
+      }
+    .mobile-menu .menu-bar ul li a{
+    font-family: var(--mont-font);
+    font-size: 14px;
+	color: #fff;
+    font-weight: 400;
+	border-bottom: 2px solid transparent;
+	padding: 0;
+	margin: 0;
+	transition: var(--trans);    
+    }
+    .mobile-menu .menu-bar ul li a:hover,
+    .mobile-menu .menu-bar ul li a.active{
+	color:  #fff;
+	border-bottom: 2px solid var(--accent-color);
+    }
+
+    .mobile-menu .menu-bar ul #close{
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: var(--accent-color);
+        border: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #fff;
+        box-shadow: 0 0 15px 0 rgb(248,34,73,0.5);
+    }
+    .mobile-menu .menu-bar ul #close:active{
+        transform: translateX(-50%) scale(.9);
+    }
+    .mobile-menu .menu-bar ul #close:focus{
+        outline: none;
+    }
+    .sponsor-section .icon-group {
+        grid-template-columns: 1fr 1fr;
+    }
+    .accordion {
+        padding: 0;
+    }
+    .footer-section .contact-block li {
+        margin: 10px 0;
+    }
+    .footer-section .contact-block .icon .fab {
+        width: 27px;
+        height: 27px;
+    }
+    .footer-section .contact-block .icon {
+        margin-top: 18px;
+    }
+} 
+
+@media only screen and (max-width: 768px) {
+    #hamberger {
+    position: absolute;
+    right: 8%;
+    }
+    .banner-section header .logo-block {
+    position: absolute;
+    left: 8%;
+    }
+    .about-section h2 {
+    font-size: 35px;
+    }
+    .about-section p {
+    font-size: 14px;
+    }
+    .col-md-3 {
+    margin: 25px 0 1px 0;
+    }
+    .about-section h3 {
+    font-size: 20px;
+    }
+    .about-section p {
+    font-size: 15px;
+    }
+    .nav-pills{
+        display: block;
+    }
+    .schedule-section #pills-tab .nav-item .nav-link {
+    width: 100%;
+    height: 60px;
+    }
+    .schedule-section .nav-pills .nav-item {
+    margin: 30px 0;
+    }
+    .schedule-section .all {
+    padding: 0;
+    }
+    .venue-section .photos {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    }
+    .card {
+    margin: 15px 0;
+    }
+    .tickets-section .card {
+        padding: 45px;
+    }
+    .tickets-section .card h6 {
+    font-size: 18px;
+    }
+    .tickets-section .card h3 {
+    font-size: 60px
+    margin-top: 30px;
+    }
+    .tickets-section .card p {
+    font-size: 16px;
+    }
+    .tickets-section .card .btn-4 {
+    width: 100%;
+    height: 56px;
+    font-size: 18px;
+    font-weight: 600;
+    }
+    .contact-section .line {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: none;
+    border-left: none;
+    }
+    .contact-section .service {
+    padding: 45px;
+    }
+    .contact-section .service .far, .contact-section .service .fas {
+    font-size: 40px;
+    }
+    .contact-section .service h3 {
+    font-size: 20px;
+    }
+    .contact-section .service p {
+    font-size: 16px;
+    }
+    .contact-section .service a {
+    font-size: 16px;
+    }
+    .contact-section form .input-group .btn-4 {
+        width: 100%;
+        height: 56px;
+    }
+    .footer-section .event-block .logo {
+    width: 57%;
+    margin-bottom: 7px;
+    }
+    .footer-section .event-block {
+    margin: 0 0 30px 0;
+    }
+    .footer-section .event-block p {
+    font-size: 14px;
+    }
+    .useful-block {
+    margin-bottom: 30px;
+    }
+} 
+
+@media only screen and (max-width: 576px) {
+    
+    .banner-section .desc h1 {
+    font-size: 30px;
+    margin: 80px 0 0 0;
+    }
+    .banner-section .desc h3 {
+    font-weight: 500;
+    }
+    .play-btn {
+    font-size: 10px;
+    height: 50px;
+    width: 50px;
+    line-height: 10px;
+    margin: 18px 0 50px 0;
+    }
+    .about-section {
+        padding: 50px 15px;
+    }
+    .venue-section .row .col-md-6 {
+    height: auto;
+    }
+    .gallery-section .center .slick-slide.slick-center .images-block {
+    transform: scale(1);
+    }
+    .gallery-section .center .slick-slide.slick-center .images-block {
+    transform: scale(1);
+    margin: 0;
+    }
+    .sponsor-section .icon-group {
+    grid-template-columns: 1fr;
+    }
+    .faq-section {
+     padding: 50px 0; 
+    }
+    .newsletter-section .forms {
+        display: block;
+    }
+    .newsletter-section form .input-groups .form-control {
+    height: 40px;
+    width: 100%;
+    }
+    .newsletter-section form .input-groups .btn-4 {
+    margin: 16px 0 0 0;
+    width: 100%;
+    height: 40px;
+    }
+    .tickets-section .card {
+     padding: 20px; 
+    }
+    .tickets-section .card .btn-4 {
+    height: 46px;
+    }
+    .contact-section form .input-group .btn-4 {
+    height: 48px;
+    }  
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
